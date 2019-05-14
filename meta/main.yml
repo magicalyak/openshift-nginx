@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Tom Gamull
+  description: Installs NGINX or NGINX Plus OpenShift router
+  company: NGINX
+  license: Apache v2
+  min_ansible_version: 2.5
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags:
+  - oc
+  - openshift
+  - container
+  - cluster
+  - nginx
+dependencies: []
+allow_duplicates: yes

@@ -1,0 +1,9 @@
+---
+- name: Install NGINX router on OpenShift
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  roles:
+    - role: magicalyak.openshift_nginx
+      nginx_plus: true
+      git_path: $HOME/Downloads/git

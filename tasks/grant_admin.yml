@@ -1,0 +1,12 @@
+- name: Login as system:admin
+  command: oc login -u system:admin
+  changed_when: false
+
+- name: Grant cluster-admin to admin
+  command: oc adm policy add-cluster-role-to-user cluster-admin admin
+  ignore_errors: true
+  changed_when: false
+
+- name: Log in as admin
+  command: oc login -u admin -p admin -n default
+  changed_when: false

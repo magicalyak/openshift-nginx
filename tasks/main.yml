@@ -1,0 +1,11 @@
+---
+- name: Give cluster-admin to admin
+  include_tasks: grant_admin.yml
+
+- name: Configure NGINX Plus Router
+  import_tasks: nginxplus.yml
+  when: nginx_plus
+
+- name: Configure NGINX OSS Router
+  import_tasks: nginxoss.yml
+  when: not nginx_plus
