@@ -2,6 +2,11 @@
   command: oc login -u system:admin
   changed_when: false
 
+- name: Create admin user
+  command: oc create user admin
+  ignore_errors: true
+  changed_when: false
+
 - name: Grant cluster-admin to admin
   command: oc adm policy add-cluster-role-to-user cluster-admin admin
   ignore_errors: true
