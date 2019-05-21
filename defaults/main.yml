@@ -1,2 +1,4 @@
 ---
 nginx_plus: yes
+openshift_user: admin
+openshift_password: admin

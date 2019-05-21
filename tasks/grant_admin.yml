@@ -3,15 +3,15 @@
   changed_when: false
 
 - name: Create admin user
-  command: oc create user admin
+  command: oc create user {{ openshift_user }}
   ignore_errors: true
   changed_when: false
 
 - name: Grant cluster-admin to admin
-  command: oc adm policy add-cluster-role-to-user cluster-admin admin
+  command: oc adm policy add-cluster-role-to-user cluster-admin {{ openshift_user }}
   ignore_errors: true
   changed_when: false
 
 - name: Log in as admin
-  command: oc login -u admin -p admin -n default
+  command: oc login -u {{ openshift_user }} -p {{ openshift_password }} -n default
   changed_when: false

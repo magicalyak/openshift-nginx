@@ -6,4 +6,6 @@
   roles:
     - role: magicalyak.openshift_nginx
       nginx_plus: true
+      openshift_user: admin
+      openshift_password: admin
       git_path: $HOME/Downloads/git

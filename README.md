@@ -26,6 +26,8 @@ none
 ## Defaults
 
 **nginx_plus:** no
+**openshift_user:** admin
+**openshift_password:** admin
 
 > Enable NGINX Plus.  If you select yes (you rock!!!) then make sure you drop the nginx-repo.crt and nginx-repo.key in the `/files` directory
 
@@ -42,6 +44,8 @@ Below is a sample playbook that includes all of the default parameters. You'll f
   roles:
     - role: magicalyak.openshift_nginx
       nginx_plus: yes
+      openshift_user: admin
+      openshift_password: admin
 ```
 
 After you install the role, copy *openshift-nginx.yml* to your project directory. For example:
