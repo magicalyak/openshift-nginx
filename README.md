@@ -26,12 +26,13 @@ You must have a certificate that matches the docker-registry service URL.  The d
 ## Defaults
 
 **nginx_plus:** no
+> Enable NGINX Plus.  If you select yes (you rock!!!) then make sure you drop the nginx-repo.crt and nginx-repo.key in the `/files` directory
 
 **openshift_user:** admin
+> Username for the administrator account (it will create this account if it doesn't exist).
 
 **openshift_password:** admin
-
-> Enable NGINX Plus.  If you select yes (you rock!!!) then make sure you drop the nginx-repo.crt and nginx-repo.key in the `/files` directory
+> Password for the administrator account.
 
 ## Example Playbook
 
