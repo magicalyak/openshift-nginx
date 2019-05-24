@@ -21,12 +21,14 @@ Performs the following tasks:
 
 ## Known Issues
 
-none
+You must have a certificate that matches the docker-registry service URL.  The default installation usually uses a self-signed certificate tied to the IP address of the pod running docker-registry.  This usually won't work.  Running a proper PKI certificate chain will work very well.  For self-signed, install the router manually.
 
 ## Defaults
 
 **nginx_plus:** no
+
 **openshift_user:** admin
+
 **openshift_password:** admin
 
 > Enable NGINX Plus.  If you select yes (you rock!!!) then make sure you drop the nginx-repo.crt and nginx-repo.key in the `/files` directory
