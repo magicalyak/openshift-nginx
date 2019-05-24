@@ -35,7 +35,7 @@
   changed_when: false
 
 - name: extract registry certificate
-  command: oc extract -n default secrets/registry-certificates --keys=registry.crt
+  command: oc extract -n default secrets/registry-certificates --keys=registry.crt --confirm
   args:
     chdir: "{{ tmp_path }}"
   changed_when: false
